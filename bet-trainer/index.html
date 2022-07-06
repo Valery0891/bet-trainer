@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="assets/icons/casino-roulette-wheel.ico" />
+    <link rel="stylesheet" href="style.css">
+    <title>Bet trainer</title>
+</head>
+<body class="container">
+<header class="header" id="border">
+    <h1 id="h1" class="h1 header-h1">Bet trainer</h1>
+    <h3 class="h3 header-h3">Let's improve your intuition</h3>
+</header>
+<main class="main">
+    <div class="left-side">
+        <label class="label"><input type="number" id="money" class="inp" placeholder="Put your money here" min="1"></label>
+        <button class="button" id="take-money">Take money</button>
+    </div>
+    <div class="center">
+        <div class="border-div">
+            <h2>Place your bets ladies and gentlemen!</h2>
+            <div class="check-box-div">
+                <div>
+                    <label class="label">Red: <input type="number" id="red-bid" class="inp bid-inp"></label>
+                </div>
+                <div>
+                    <label class="label">Black: <input type="number" id="black-bid" class="inp bid-inp"></label>
+                </div>
+                <div>
+                    <label class="label">Zero: <input type="number" id="zero-bid" class="inp bid-inp"></label>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="button" id="wooosh">Spin the roulette!</button>
+        </div>
+        <div class="won-bid">
+            <output id="won-bid">____</output>
+        </div>
+    </div>
+    <div class="right-side">
+        <h2>Statistics:</h2>
+        <div>
+            <span class="span span-count">Red count: <output id="red_count">0</output></span>
+            <span class="span span-count">Black count: <output id="black_count">0</output></span>
+            <span class="span span-count">Zero count: <output id="zero_count">0</output></span>
+        </div>
+        <div class="balance-div">
+            <span class="span">Moves: <output id="moves">0</output></span>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <img alt="cat" src="assets/img/left-cat.png" class="kisa-img">
+    <h3 class="h3 footer-h3">Train first... on cats!</h3>
+    <img alt="cat" src="assets/img/right-cat.png" class="kisa-img">
+</footer>
+<script type="module" src="index.js"></script>
+</body>
+</html>
