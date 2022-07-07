@@ -21,6 +21,14 @@
 .h3 {
     color: #0cb9fd;
 }
+.inp {
+    text-align: center;
+    font-size: 20px;
+    background: none;
+}
+.inp::placeholder {
+    color: black;
+}
 .button {
     width: 250px;
     height: 50px;
@@ -54,7 +62,7 @@ button:active {
     min-height: calc(100vh - 315px);
     justify-content: center;
     align-items: center;
-    gap: 35px;
+    gap: 10px;
     background-image: url('assets/img/diamonds.png');
     background-repeat: no-repeat;
     background-size: 100%;
@@ -62,29 +70,18 @@ button:active {
     border-bottom: 2px solid lightskyblue;
 }
 .main-block {
+    padding: 15px;
     background: white;
     opacity: 80%;
+    border: 2px solid lightskyblue;
 }
-/*================*/
-.left-side {
-    padding: 20px 10px;
+     /*================*/
+.first-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    border: 2px solid lightskyblue;
-}
-.label {
-    font-size: 18px;
-}
-.inp {
-    text-align: center;
-    font-size: 20px;
-    background: none;
-}
-.inp::placeholder {
-    color: black;
 }
 .bid-inp {
     width: 100px;
@@ -92,12 +89,9 @@ button:active {
 #take-money {
     display: none;
 }
-/*================*/
-.center {
+     /*================*/
+.second-block {
     display: none;
-    margin-top: 10px;
-    padding: 10px;
-    border: 2px solid lightskyblue;
 }
 .bid-div {
     margin: 15px auto;
@@ -106,22 +100,32 @@ button:active {
     justify-content: center;
     gap: 25px;
 }
+     /*================*/
+.third-block {
+    display: none;
+}
+@keyframes roulette-moving {
+    100% {transform: rotate(-360deg);}
+}
+.roulette-img {
+    width: 15vw;
+}
+.roulette-spin {
+    animation: roulette-moving .8s linear 0s 2;
+}
 .won-bid {
-    margin: 25px;
+    margin-bottom: 10px;
     font-size: 20px;
 }
-/*================*/
-.right-side {
+     /*================*/
+.fourth-block {
     display: none;
-    padding: 10px;
     flex-direction: column;
     gap: 25px;
-    border: 2px solid lightskyblue;
 }
 .counts-div {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 10px;
 }
 .span {
@@ -158,14 +162,14 @@ button:active {
         background-image: url('assets/img/diamonds-vertical.png');
         background-repeat: repeat;
     }
-    .left-side {
-        width: 89vw;
+    .first-block,
+    .second-block,
+    .third-block,
+    .fourth-block {
+        width: 85vw;
     }
-    .center {
-        width: 89vw;
-    }
-    .right-side {
-        width: 89vw;
+    .roulette-img {
+        width: 20vh;
     }
     .footer {
         flex-direction: column;

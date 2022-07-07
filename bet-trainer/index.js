@@ -11,8 +11,10 @@ const wonBid = document.getElementById('won-bid');
 const moves = document.getElementById('moves');
 
 const bidInp = document.querySelectorAll('.bid-inp');
-const center = document.querySelector('.center');
-const rightSide = document.querySelector('.right-side');
+const secondBlock = document.querySelector('.second-block');
+const thirdBlock = document.querySelector('.third-block');
+const fourthBlock = document.querySelector('.fourth-block');
+const spinRoulette = document.querySelector('.roulette-img');
 
 let mov = 0, redCount = 0, blackCount = 0, zeroCount = 0, amount;
 
@@ -21,8 +23,9 @@ money.addEventListener('blur', () => {
         money.setAttribute('readonly', 'readonly');
         amount = +money.value;
         takeMoney.style.display = 'inline';
-        center.style.display = 'block';
-        rightSide.style.display = 'flex';
+        secondBlock.style.display = 'block';
+        thirdBlock.style.display = 'block';
+        fourthBlock.style.display = 'block';
     }
 });
 takeMoney.addEventListener('click', () => {
@@ -76,27 +79,40 @@ function returnBid(bid) {
 }
 
 function generator() {
+    wonBid.innerHTML = '____';
+    wonBid.style.color = 'black';
+    spinRoulette.classList.add('roulette-spin');
+
     const randomDig = Math.floor(Math.random() * 37);
 
     if (randomDig > 0 && randomDig < 19) {
-        wonBid.innerHTML = 'Played red';
-        wonBid.style.color = 'red';
+        setTimeout(function() {
+            spinRoulette.classList.remove('roulette-spin');
+            wonBid.innerHTML = 'Played Red';
+            wonBid.style.color = 'red';
+        }, 1600);
         redCount++;
         redC.innerHTML = `${redCount}`;
         if (redBid.value) {
             money.value = +redBid.value * 2 + +money.value;
         }
     } else if (randomDig > 18) {
-        wonBid.innerHTML = 'Played black';
-        wonBid.style.color = 'black';
+        setTimeout(function() {
+            spinRoulette.classList.remove('roulette-spin');
+            wonBid.innerHTML = 'Played Black';
+            wonBid.style.color = 'black';
+        }, 1600);
         blackCount++;
         blackC.innerHTML = `${blackCount}`;
         if (blackBid.value) {
             money.value = +blackBid.value * 2 + +money.value;
         }
     } else {
-        wonBid.innerHTML = 'Played Zero';
-        wonBid.style.color = '#24e641';
+        setTimeout(function() {
+            spinRoulette.classList.remove('roulette-spin');
+            wonBid.innerHTML = 'Played Zero';
+            wonBid.style.color = '#24e641';
+        }, 1600);
         zeroCount++;
         zeroC.innerHTML = `${zeroCount}`;
         if (zeroBid.value) {

@@ -15,33 +15,36 @@
         <h3 class="h3 header-h3">Let's improve your intuition</h3>
     </header>
     <main class="main">
-        <div class="main-block left-side">
-            <label class="label"><input type="number" id="money" class="inp" placeholder="Put your money here" min="1"></label>
+        <div class="main-block first-block">
+            <label><input type="number" id="money" class="inp" placeholder="Put your money here" min="1"></label>
             <button class="button" id="take-money">Take money</button>
         </div>
-        <div class="main-block center">
-            <div class="border-div">
-                <h2>Place your bets ladies and gentlemen!</h2>
-                <div class="bid-div">
-                    <div>
-                        <label class="label">Red: <input type="number" id="red-bid" class="inp bid-inp"></label>
-                    </div>
-                    <div>
-                        <label class="label">Black: <input type="number" id="black-bid" class="inp bid-inp"></label>
-                    </div>
-                    <div>
-                        <label class="label">Zero: <input type="number" id="zero-bid" class="inp bid-inp"></label>
-                    </div>
+        <div class="main-block second-block">
+            <h2>Place your bets ladies and gentlemen!</h2>
+            <div class="bid-div">
+                <div>
+                    <label><input type="number" id="red-bid" class="inp bid-inp" placeholder="Red" min="1"></label>
+                </div>
+                <div>
+                    <label><input type="number" id="black-bid" class="inp bid-inp" placeholder="Black" min="1"></label>
+                </div>
+                <div>
+                    <label><input type="number" id="zero-bid" class="inp bid-inp" placeholder="Zero" min="1"></label>
                 </div>
             </div>
+        </div>
+        <div class="main-block third-block">
             <div>
-                <button class="button" id="wooosh">Spin the roulette!</button>
+                <img alt="roulette" src="assets/img/roulette.png" class="roulette-img">
             </div>
             <div class="won-bid">
                 <output id="won-bid">____</output>
             </div>
+            <div>
+                <button class="button" id="wooosh">Spin the roulette!</button>
+            </div>
         </div>
-        <div class="main-block right-side">
+        <div class="main-block fourth-block">
             <h2>Statistics:</h2>
             <div class="counts-div">
                 <span class="span span-count">Red count: <output id="red_count">0</output></span>
